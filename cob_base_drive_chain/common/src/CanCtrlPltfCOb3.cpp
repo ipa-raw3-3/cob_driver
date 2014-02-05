@@ -959,7 +959,7 @@ bool CanCtrlPltfCOb3::initPltf()
 	std::vector<double> vdFactorVel;
 //	vdFactorVel.assign(4,0);
 	vdFactorVel.assign(m_iNumDrives,0);
-	double dhomeVeloRadS = -1.0;
+	double dhomeVeloRadS = -0.5;
 
 
 	// Start can open network
@@ -1104,7 +1104,7 @@ bool CanCtrlPltfCOb3::initPltf()
 				}	
 
 				// increment timeout counter
-				if (iCnt++ > 1000) //cpc-ck has 500 for Cob 3.5 here
+				if (iCnt++ > 1500) //cpc-ck has 500 for Cob 3.5 here
 					bTimeOut = true;
 
 				// Sleep: To avoid can overload
